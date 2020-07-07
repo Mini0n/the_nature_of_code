@@ -22,18 +22,19 @@ function draw() {
 }
 
 function Walker() {
-  this.pos = createVector(width / 2, height / 2);
+  this.x = width / 2;
+  this.y = height / 2;
 
   this.display = walkerDisplay;
   this.walk = walk;
 
   function walkerDisplay() {
     fill(255);
-    ellipse(this.pos.x, this.pos.y, 20, 20);
+    ellipse(this.x, this.y, 20, 20);
   }
 
   function walk() {
-    this.x = this.pos.x + random(-3, 3);
-    this.y = this.pos.y + random(-3, 3);
+    this.x = this.x + random(-3, 3);
+    this.y = this.y + random(-3, 3);
   }
 }
